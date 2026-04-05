@@ -1,0 +1,302 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Tech | Innovating the Future</title>
+
+
+    <style>
+        :root {
+            --primary-blue: #007aff;
+            --secondary-blue: #00d4ff;
+            --dark-bg: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --text-light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Hero --- */   
+        
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* --- Sections --- */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* --- Services Grid --- */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--glass-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--secondary-blue);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-blue);
+            margin-top: 0;
+        }
+
+        /* --- Form --- */
+        form {
+            background: var(--glass-bg);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.4);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #070b14;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: "▹ ";
+            color: var(--secondary-blue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>S-TECH</h1>
+        <p>Empowering Innovation Through Smart Technology Solutions</p>
+        <p style="font-style: italic; opacity: 0.7;">Transforming Ideas into Digital Reality</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to S-Tech</h2>
+        <div style="text-align: center; max-width: 700px; margin: auto;">
+            <p>Welcome to S-Tech, a forward-thinking technology company dedicated to delivering innovative digital
+                solutions for individuals and businesses.</p>
+            <p>We focus on modern, scalable, and user-friendly solutions including web development, mobile apps, and AI
+                systems.</p>
+        </div>
+    </section>
+
+    <section id="about" style="background: rgba(255,255,255,0.02); border-radius: 50px;">
+        <h2>About Us</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Our Mission</h3>
+                <p>To deliver reliable and innovative technology solutions that drive success.</p>
+            </div>
+            <div class="service-card">
+                <h3>Our Vision</h3>
+                <p>To become a globally recognized leader in the technology space.</p>
+            </div>
+        </div>
+        <div style="margin-top: 40px; text-align: center;">
+            <h3>Core Values</h3>
+            <p>Innovation • Integrity • Quality • Customer Satisfaction • Continuous Improvement</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>Responsive website design</li>
+                    <li>E-commerce website development</li>
+                    <li>Portfolio and Business websites </li>
+                    <li>website Maintenance and updates</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Mobile Apps</h3>
+                <ul>
+                    <li>Custom mobile app development iOS & Android</li>
+                    <li>UI/UX Design For apps </li>
+                    <li>App Testing & Deployment</li>
+                    <li>Ongoing Support and updates </li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>AI Solutions</h3>
+                <ul>
+                    <li>Chatbot Development</li>
+                    <li>Machine Learning models</li>
+                    <li>Data Analysis and prediction system </li>
+                    <li>AI-based Automation Tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label>Full Name</label>
+            <input type="text" placeholder="John Silva">
+
+            <label>Email Address</label>
+            <input type="email" placeholder="johnsilva@gmail.com">
+
+            <label>Message</label>
+            <textarea rows="5"
+                placeholder="i am interested in developing a business website.please provide more details about your servicesand priceing."></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 40px; color: #94a3b8;">
+            <p>📍 Kilinochchi, Sri Lanka</p>
+            <p>📞 +94 77 123 4567 | ✉️ info@stech.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 S-Tech. All Rights Reserved.</p>
+        <p>Designed and Developed by S-Tech Team</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S-Tech</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>S-Tech</h1>
+    <p>Empowering Innovation Through Smart Technology Solutions</p>
+    <p><i>Transforming Ideas into Digital Reality</i></p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to S-Tech</h2>
+    <p>
+        Welcome to S-Tech, a forward-thinking technology company dedicated to delivering 
+        innovative digital solutions for individuals and businesses.
+    </p>
+    <p>
+        At S-Tech, we focus on modern, scalable, and user-friendly solutions including 
+        web development, mobile apps, and AI systems.
+    </p>
+    <p>
+        We combine creativity and technical excellence to build products that make a difference.
+    </p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <p>
+        S-Tech was established to bring advanced technology solutions to businesses of all sizes.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>To deliver reliable and innovative technology solutions.</p>
+
+    <h3>Our Vision</h3>
+    <p>To become a globally recognized technology company.</p>
+
+    <h3>Core Values</h3>
+    <ul>
+        <li>Innovation</li>
+        <li>Integrity</li>
+        <li>Quality</li>
+        <li>Customer Satisfaction</li>
+        <li>Continuous Improvement</li>
+    </ul>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <h3>Web Development</h3>
+    <ul>
+        <li>Responsive website design</li>
+        <li>E-commerce development</li>
+        <li>Business websites</li>
+    </ul>
+
+    <h3>Mobile App Development</h3>
+    <ul>
+        <li>Android & iOS apps</li>
+        <li>UI/UX design</li>
+        <li>Testing & deployment</li>
+    </ul>
+
+    <h3>AI Solutions</h3>
+    <ul>
+        <li>Chatbots</li>
+        <li>Machine learning</li>
+        <li>Automation tools</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>Get in touch with S-Tech today.</p>
+
+    <form>
+        <label>Full Name:</label><br>
+        <input type="text" placeholder="John Silva"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="johnsilva@gmail.com"><br><br>
+
+        <label>Message:</label><br>
+        <textarea rows="4"></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p>Address: Kilinochchi, Sri Lanka</p>
+    <p>Phone: +94 77 123 4567</p>
+    <p>Email: info@stech.com</p>
+</section>
+
+<footer>
+    <p>© 2026 S-Tech. All Rights Reserved.</p>
+    <p>Designed and Developed by S-Tech Team</p>
+</footer>
+
+</body>
+</html>
