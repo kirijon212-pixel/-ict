@@ -1,195 +1,173 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-Tech | Innovating the Future</title>
+    <title>K-TECH | Innovating the Future</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-blue: #007aff;
-            --secondary-blue: #00d4ff;
-            --dark-bg: #0f172a;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --text-light: #f8fafc;
+            --primary: #007aff;
+            --secondary: #00d4ff;
+            --bg: #0f172a;
+            --card: rgba(255, 255, 255, 0.05);
+            --text: #f8fafc;
         }
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
         }
 
-        /* --- Header & Hero --- */   
-        
+        /* HERO */
         header {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            padding: 100px 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: radial-gradient(circle at top, #1e293b, #020617);
+            animation: fadeIn 2s ease;
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+            font-size: 4rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 2px;
+            animation: slideDown 1s ease;
         }
 
         header p {
-            font-size: 1.2rem;
+            margin-top: 15px;
             color: #94a3b8;
-            max-width: 600px;
-            margin: 10px auto;
+            animation: fadeIn 2s ease;
         }
 
-        /* --- Navigation --- */
+        .btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+        }
+
+        /* NAV */
         nav {
             position: sticky;
             top: 0;
-            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.6);
             padding: 15px;
             text-align: center;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
         }
 
         nav a {
+            margin: 0 15px;
             color: white;
-            margin: 0 20px;
             text-decoration: none;
-            font-weight: 500;
             transition: 0.3s;
-            font-size: 0.9rem;
-            text-transform: uppercase;
         }
 
         nav a:hover {
-            color: var(--secondary-blue);
+            color: var(--secondary);
         }
 
-        /* --- Sections --- */
         section {
-            max-width: 1000px;
-            margin: auto;
             padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
         }
 
         h2 {
-            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 40px;
-            position: relative;
+            font-size: 2.5rem;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: var(--primary-blue);
-            margin: 10px auto;
-            border-radius: 2px;
-        }
-
-        /* --- Services Grid --- */
-        .services-container {
+        /* CARDS */
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        .service-card {
-            background: var(--glass-bg);
-            padding: 30px;
+        .card {
+            background: var(--card);
+            padding: 25px;
             border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
+            transition: 0.4s;
         }
 
-        .service-card:hover {
+        .card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--secondary-blue);
+            border: 1px solid var(--secondary);
         }
 
-        .service-card h3 {
-            color: var(--secondary-blue);
-            margin-top: 0;
-        }
-
-        /* --- Form --- */
-        form {
-            background: var(--glass-bg);
-            padding: 40px;
+        /* BANNER */
+        .banner {
+            text-align: center;
+            padding: 60px;
             border-radius: 20px;
-            max-width: 600px;
+            background: linear-gradient(135deg, #007aff, #00d4ff);
+            color: white;
+            margin: 50px 0;
+            animation: fadeIn 2s ease;
+        }
+
+        /* CONTACT */
+        form {
+            max-width: 500px;
             margin: auto;
         }
 
-        input,
-        textarea {
+        input, textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             margin-top: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            color: white;
-            font-family: inherit;
-        }
-
-        button {
-            width: 100%;
-            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
-            color: white;
-            padding: 15px;
             border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
         }
 
-        button:hover {
-            opacity: 0.9;
-            box-shadow: 0 0 20px rgba(0, 122, 255, 0.4);
-        }
-
-        /* --- Footer --- */
+        /* FOOTER */
         footer {
-            background: #070b14;
-            padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #64748b;
+            padding: 30px;
+            background: #020617;
+            color: #94a3b8;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        li {
-            margin-bottom: 10px;
-            color: #cbd5e1;
-        }
-
-        li::before {
-            content: "▹ ";
-            color: var(--secondary-blue);
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -198,105 +176,67 @@
 
     <header>
         <h1>K-TECH</h1>
-        <p>Empowering Innovation Through Smart Technology Solutions</p>
-        <p style="font-style: italic; opacity: 0.7;">Transforming Ideas into Digital Reality</p>
+        <p>Smart Digital Solutions for the Future</p>
+        <button class="btn" onclick="document.getElementById('services').scrollIntoView()">Explore Services</button>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
+        <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="home">
-        <h2>Welcome to S-Tech</h2>
-        <div style="text-align: center; max-width: 700px; margin: auto;">
-            <p>Welcome to S-Tech, a forward-thinking technology company dedicated to delivering innovative digital
-                solutions for individuals and businesses.</p>
-            <p>We focus on modern, scalable, and user-friendly solutions including web development, mobile apps, and AI
-                systems.</p>
-        </div>
-    </section>
-
-    <section id="about" style="background: rgba(255,255,255,0.02); border-radius: 50px;">
+    <section id="about">
         <h2>About Us</h2>
-        <div class="services-container">
-            <div class="service-card">
-                <h3>Our Mission</h3>
-                <p>To deliver reliable and innovative technology solutions that drive success.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Mission</h3>
+                <p>Deliver innovative solutions.</p>
             </div>
-            <div class="service-card">
-                <h3>Our Vision</h3>
-                <p>To become a globally recognized leader in the technology space.</p>
+            <div class="card">
+                <h3>Vision</h3>
+                <p>Global tech leader.</p>
             </div>
-        </div>
-        <div style="margin-top: 40px; text-align: center;">
-            <h3>Core Values</h3>
-            <p>Innovation • Integrity • Quality • Customer Satisfaction • Continuous Improvement</p>
         </div>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service-card">
+        <h2>Services</h2>
+        <div class="grid">
+            <div class="card">
                 <h3>Web Development</h3>
-                <ul>
-                    <li>Responsive website design</li>
-                    <li>E-commerce website development</li>
-                    <li>Portfolio and Business websites </li>
-                    <li>website Maintenance and updates</li>
-                </ul>
+                <p>Modern responsive websites.</p>
             </div>
-            <div class="service-card">
+            <div class="card">
                 <h3>Mobile Apps</h3>
-                <ul>
-                    <li>Custom mobile app development iOS & Android</li>
-                    <li>UI/UX Design For apps </li>
-                    <li>App Testing & Deployment</li>
-                    <li>Ongoing Support and updates </li>
-                </ul>
+                <p>Android & iOS apps.</p>
             </div>
-            <div class="service-card">
+            <div class="card">
                 <h3>AI Solutions</h3>
-                <ul>
-                    <li>Chatbot Development</li>
-                    <li>Machine Learning models</li>
-                    <li>Data Analysis and prediction system </li>
-                    <li>AI-based Automation Tools</li>
-                </ul>
+                <p>Automation & smart systems.</p>
             </div>
         </div>
     </section>
 
+    <div class="banner">
+        <h2>🚀 Ready to Build Your Project?</h2>
+        <p>Contact us today and grow your business!</p>
+    </div>
+
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>Contact</h2>
         <form>
-            <label>Full Name</label>
-            <input type="text" placeholder="John Silva">
-
-            <label>Email Address</label>
-            <input type="email" placeholder="johnsilva@gmail.com">
-
-            <label>Message</label>
-            <textarea rows="5"
-                placeholder="i am interested in developing a business website.please provide more details about your servicesand priceing."></textarea>
-
-            <button type="submit">Send Message</button>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea rows="4" placeholder="Message"></textarea>
+            <button class="btn">Send</button>
         </form>
-
-        <div style="text-align: center; margin-top: 40px; color: #94a3b8;">
-            <p>📍 Kilinochchi, Sri Lanka</p>
-            <p>📞 +94 77 123 4567 | ✉️ info@stech.com</p>
-        </div>
     </section>
 
     <footer>
-        <p>© 2026 S-Tech. All Rights Reserved.</p>
-        <p>Designed and Developed by S-Tech Team</p>
+        <p>© 2026 K-TECH</p>
     </footer>
 
 </body>
-
 </html>
